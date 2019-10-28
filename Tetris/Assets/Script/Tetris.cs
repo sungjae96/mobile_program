@@ -15,7 +15,7 @@ public class Tetris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void SetMap()
@@ -35,4 +35,6 @@ public class Tetris : MonoBehaviour
            
         }
     }
+
+
 }
