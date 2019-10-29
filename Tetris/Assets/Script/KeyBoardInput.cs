@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyBoardInput : MonoBehaviour
 {
     private float falltime = 1.0f;
+    private Vector3 rotationPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,11 @@ public class KeyBoardInput : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.position += new Vector3(0, -1, 0);
+        }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+           transform.Rotate(0, 0 ,90);
         }
     }
 
