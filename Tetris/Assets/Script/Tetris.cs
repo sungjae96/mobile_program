@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tetris : MonoBehaviour
 {
-    public Vector3 rotationpoint;
     float falltime;
     float speed;
 
@@ -42,8 +41,11 @@ public class Tetris : MonoBehaviour
 
         foreach (Transform children in transform)
         {
-            if (grid[(int)transform.position.x, (int)transform.position.y - 1] != null || transform.position.y == 0)            
-            downmovecheck = false;
+            if (grid[(int)transform.position.x, (int)transform.position.y] != null)
+            {
+                transform.position += new Vector3(0, 1, 0);
+                downmovecheck = false;
+            }
         }
 
         if (falltime <= 0.0f && downmovecheck)
@@ -64,7 +66,7 @@ public class Tetris : MonoBehaviour
 
     private void InputKey()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && leftmovecheck)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {          
             transform.position += new Vector3(-1, 0, 0);
             if(!MoveableCheck())
@@ -73,7 +75,7 @@ public class Tetris : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && rightmovecheck)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {           
             transform.position += new Vector3(1, 0, 0);
             if (!MoveableCheck())
