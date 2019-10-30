@@ -8,13 +8,9 @@ public class Tetris : MonoBehaviour
     float falltime;
     float speed;
 
-    [SerializeField]
     bool leftmovecheck;
-    [SerializeField]
     bool rightmovecheck;
-    [SerializeField]
     bool downmovecheck;
-    [SerializeField]
     bool rotationmovecheck;
 
     static int height = 20;
@@ -125,13 +121,6 @@ public class Tetris : MonoBehaviour
     {
         foreach(Transform children in transform)
         {
-            //if(children.transform.position.x < 0 || children.transform.position.x >= width ||
-            //   children.transform.position.y < 0 
-            //   )
-            //{
-            //    return false;
-            //}
-
             if (grid[(int)children.transform.position.x, (int)children.transform.position.y] != null)
                 return false;
         }
