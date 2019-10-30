@@ -38,7 +38,7 @@ public class Spawner : MonoBehaviour
     private void ShowNextBlock()
     {
         Destroy(nextBlock.gameObject);
-        nextBlock = Instantiate(BlockPrefabs[Random.Range(0, BlockPrefabs.Length)], new Vector3(25,10,0), Quaternion.identity);
+        nextBlock = Instantiate(BlockPrefabs[Random.Range(0, BlockPrefabs.Length)], new Vector3(30,10,0), Quaternion.identity);
         
     }
 }
