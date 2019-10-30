@@ -6,6 +6,8 @@ public class Tetris : MonoBehaviour
 {
     float fallTime;
     float speed;
+    public 
+    bool comboactive;
 
     public static int height = 20;
     public static int width = 10;
@@ -15,6 +17,8 @@ public class Tetris : MonoBehaviour
     void Start()
     {
         fallTime = 1.0f;
+        speed = 1.0f;
+        bool comboactive = false;
     }
 
     // Update is called once per frame
@@ -130,9 +134,21 @@ public class Tetris : MonoBehaviour
         {
             if (FullLine(i))
             {
+                FindObjectOfType<Score>().combo++;
+                comboactive = true;
                 DeleteLine(i);
                 DownLine(i);
             }
+        }
+
+        if(!comboactive)
+        {
+            FindObjectOfType<Score>().combo = 0;
+        }
+
+        else if(comboactive)
+        {
+            comboactive = false;
         }
     }
 
