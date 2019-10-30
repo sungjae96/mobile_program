@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\KeyBoardInput.cs" />
+    <Compile Include="Assets\Script\Spawner.cs" />
     <Compile Include="Assets\Script\Tetris.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/USER/Documents/GitHub/mobile_program/Tetris/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

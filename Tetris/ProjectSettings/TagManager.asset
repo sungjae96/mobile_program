@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - leftwall
+  - rightwall
+  - bottom
   layers:
   - Default
   - TransparentFX
