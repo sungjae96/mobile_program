@@ -18,7 +18,7 @@ public class Tetris : MonoBehaviour
     {
         fallTime = 1.0f;
         speed = 1.0f;
-        bool comboactive = false;
+        comboactive = false;
     }
 
     // Update is called once per frame
