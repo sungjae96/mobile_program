@@ -57,6 +57,21 @@ public class Tetris : MonoBehaviour
             if (!MoveableCheck())
                 transform.Rotate(0, 0, 90);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            while(true)
+            {
+                if (MoveableCheck())
+                    transform.position -= new Vector3(0, 1, 0);
+
+                else if (!MoveableCheck())
+                {
+                    transform.position += new Vector3(0, 1, 0);
+                    break;
+                }
+            }
+        }
     }
 
     void Falling()
